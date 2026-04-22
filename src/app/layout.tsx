@@ -5,7 +5,10 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "AI Tools Directory — Discover the Best AI Tools",
-  description: "Curated directory of the best AI tools for writing, coding, design, video, and productivity.",
+  description: "Curated directory of the best AI tools.",
+  verification: {
+    google: "<meta name="google-site-verification" content="h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ" />
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
