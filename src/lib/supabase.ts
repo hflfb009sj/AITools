@@ -90,7 +90,7 @@ export async function getRelatedTools(
   toolId: string,
   categoryId: string,
   limit = 3
-): Promise<Tool[]> {
+): Promise<Partial<Tool>[]> {
   const { data } = await supabase
     .from("tools")
     .select("id, name, slug, short_description, logo_url, pricing_type")
@@ -98,7 +98,7 @@ export async function getRelatedTools(
     .eq("category_id", categoryId)
     .neq("id", toolId)
     .limit(limit);
-  return data ?? [];
+  return (data ?? []) as Tool[];
 }
 
 export async function getToolsByCategory(
