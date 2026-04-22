@@ -7,7 +7,8 @@ export const metadata: Metadata = {
   title: "AI Tools Directory — Discover the Best AI Tools",
   description: "Curated directory of the best AI tools.",
   verification: {
-    google: "<meta name="google-site-verification" content="h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ" />
+    // Just provide the string code here
+    google: "h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ",
   },
 };
 
