@@ -4,11 +4,10 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "AI Tools Directory — Discover the Best AI Tools",
-  description: "Curated directory of the best AI tools.",
+  title: "Votre Titre",
+  description: "Votre description",
   verification: {
-    // Just provide the string code here
-    google: "h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ",
+    google: "h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ", // Copiez uniquement la valeur ici
   },
 };
 
