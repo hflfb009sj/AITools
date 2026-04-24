@@ -1,28 +1,27 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
+import Script from 'next/script'
 
-export const metadata: Metadata = {
-  title: "Votre Titre",
-  description: "Votre description",
-  verification: {
-    google: "h3qV_hHh2pPZXWANoOrALWU_kCmQAzCklejUUKNWraQ", // Copiez uniquement la valeur ici
-  },
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
+    <html lang="ar">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-030CWS3CQY"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-030CWS3CQY');
+          `}
+        </Script>
       </head>
-      <body>
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
